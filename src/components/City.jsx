@@ -22,6 +22,8 @@ function City() {
 
   const { getCity, currentCity, isLoading } = useCities();
 
+  console.log(getCity);
+  
   // TEMP DATA
   // currentCity = {
   //   cityName: "Lisbon",

@@ -3,6 +3,7 @@ import {
   useEffect,
   useContext,
   useReducer,
+  useCallback,
 } from "react";
 const BASE_URL = "http://localhost:7000";
 const CitiesContexts = createContext();
@@ -68,7 +69,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  const getCity = (async function getCity(id) {
+  const getCity = useCallback(async function getCity(id) {
     if (Number(id === currentCity.id)) return;
     dispatch({ type: "loading" });
     try {
@@ -85,6 +86,9 @@ function CitiesProvider({ children }) {
       });
     }
   }, [currentCity.id]);
+
+  console.log();
+  
 
   async function createCity(newCity) {
     dispatch({ type: "loading" });

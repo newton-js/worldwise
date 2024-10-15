@@ -35,6 +35,30 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
+    },
+    {
+      "id": "c8ba",
+      "cityName": "Ilorin",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2024-10-15T13:01:37.569Z",
+      "notes": "unity",
+      "position": {
+        "lat": "8.4530659728748",
+        "lng": "4.504394531250001"
+      }
+    },
+    {
+      "id": "f313",
+      "cityName": "Diapangou",
+      "country": "Burkina Faso",
+      "emoji": "🇧🇫",
+      "date": "2024-10-15T13:02:13.751Z",
+      "notes": "",
+      "position": {
+        "lat": "12.105100487878207",
+        "lng": "0.087890625"
+      }
     }
   ]
 }

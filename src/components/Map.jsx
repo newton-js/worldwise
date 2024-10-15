@@ -56,18 +56,19 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        {cities.map((city) => (
+        {cities.map((city, i) => (
           <Marker
             position={
               geolocationPosition
                 ? [geolocationPosition.lat, geolocationPosition.lng]
                 : [city.position.lat, city.position.lng]
             }
+            key={i}
           >
             <Popup>
               <span>{city.emoji}</span> <span>{city.cityName}</span>
             </Popup>
-          </Marker>
+          </Marker> 
         ))}
         <ChangeCenter position={mapPosition} />
         <DetectClick />

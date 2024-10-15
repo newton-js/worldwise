@@ -23,7 +23,6 @@ function CountryList() {
       {countries.map((country) => (
         <CountryItem country={country} key={country.country} />
       ))}
-      <p>country</p>
     </ul>
   );
 }

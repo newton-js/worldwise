@@ -24,7 +24,7 @@ const Product = lazy(() => import("./pages/Product"));
 const AppLayout = lazy(() => import("./pages/AppLayout"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
-function App() {
+function App() {  
   return (
     <AuthProvider>
       <CitiesProvider>

@@ -69,7 +69,25 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  const getCity = useCallback(async function getCity(id) {
+  // const getCity = useCallback(async function getCity(id) {
+  //   if (Number(id === currentCity.id)) return;
+  //   dispatch({ type: "loading" });
+  //   try {
+  //     const res = await fetch(`${BASE_URL}/cities/${id}`);
+  //     const data = await res.json();
+  //     dispatch({
+  //       type: "city/loaded",
+  //       payload: data,
+  //     });
+  //   } catch (err) {
+  //     dispatch({
+  //       type: "rejected",
+  //       payload: "there was an error loading the city",
+  //     });
+  //   }
+  // }, [currentCity.id]);
+
+  async function getCity(id) {
     if (Number(id === currentCity.id)) return;
     dispatch({ type: "loading" });
     try {
@@ -85,9 +103,7 @@ function CitiesProvider({ children }) {
         payload: "there was an error loading the city",
       });
     }
-  }, [currentCity.id]);
-
-  console.log();
+  };
   
 
   async function createCity(newCity) {
